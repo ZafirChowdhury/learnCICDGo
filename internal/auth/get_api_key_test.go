@@ -64,7 +64,7 @@ func TestGetAPIKey(t *testing.T) {
 
 			// Check for an error by message
 			if tc.wantErrMsg != "" {
-				if gotErr == nil || gotErr.Error() == tc.wantErrMsg {
+				if gotErr == nil || gotErr.Error() != tc.wantErrMsg {
 					t.Errorf("error message: got %v, want %q", gotErr, tc.wantErrMsg)
 				}
 				return
