@@ -105,6 +105,6 @@ func main() {
 		log.Fatal("port number out of range")
 	}
 
-	log.Printf("Serving on port: %s", p)
+	log.Printf("Serving on port: %d", p)
 	log.Fatal(srv.ListenAndServe())
 }
